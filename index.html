@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vip Arts — Wooden Engraving Crafts</title>
+    <meta name="description" content="Artistic wooden engraving crafts — wall art, keychains, name plates, and custom designs." />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a href="#home" class="brand" aria-label="Vip Arts Home">
+          <img src="assets/img/logo.svg" alt="Vip Arts logo" width="40" height="40" />
+          <span>Vip Arts</span>
+        </a>
+        <nav class="main-nav" role="navigation" aria-label="Primary">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">☰</button>
+          <ul id="nav-list">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#shop" class="nav-link">Shop</a></li>
+            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <button id="themeToggle" class="btn theme-toggle" aria-label="Toggle theme" title="Toggle theme">🌗</button>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <div class="float-layer" aria-hidden="true">
+        <span class="float leaf" style="--x:10%;--d:12s"></span>
+        <span class="float chip" style="--x:25%;--d:16s"></span>
+        <span class="float leaf" style="--x:40%;--d:14s"></span>
+        <span class="float chip" style="--x:60%;--d:18s"></span>
+        <span class="float leaf" style="--x:75%;--d:20s"></span>
+        <span class="float chip" style="--x:85%;--d:22s"></span>
+      </div>
+
+      <!-- Hero -->
+      <section id="home" class="section hero" aria-label="Hero">
+        <div class="hero-bg" aria-hidden="true">
+          <img src="assets/img/hero-wood.svg" alt="" />
+        </div>
+        <div class="container hero-inner">
+          <h1 class="hero-title"><span class="fade-in">Handcrafted Wooden Engraving</span></h1>
+          <p class="hero-subtitle fade-in-delay">Art made with patience, precision, and passion.</p>
+          <div class="hero-ctas fade-in-delay-2">
+            <a href="#shop" class="btn btn-primary">Shop Now</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features banner -->
+      <section class="section features" aria-label="Highlights">
+        <div class="container">
+          <ul class="features-grid" role="list">
+            <li class="feature-item">
+              <img src="assets/icons/shipping.svg" alt="Pan-India Free Shipping" width="36" height="36" />
+              <div>
+                <strong>Pan-India</strong>
+                <span>Free Shipping</span>
+              </div>
+            </li>
+            <li class="feature-item">
+              <img src="assets/icons/worth.svg" alt="100% worth product" width="36" height="36" />
+              <div>
+                <strong>100% Worth</strong>
+                <span>Craft Quality</span>
+              </div>
+            </li>
+            <li class="feature-item">
+              <img src="assets/icons/support.svg" alt="Responsive customer support" width="36" height="36" />
+              <div>
+                <strong>Responsive</strong>
+                <span>Customer Support</span>
+              </div>
+            </li>
+            <li class="feature-item">
+              <img src="assets/icons/security.svg" alt="100% data security" width="36" height="36" />
+              <div>
+                <strong>100% Data</strong>
+                <span>Security</span>
+              </div>
+            </li>
+            <li class="feature-item">
+              <img src="assets/icons/orders.svg" alt="5000+ orders" width="36" height="36" />
+              <div>
+                <strong>5000+</strong>
+                <span>Happy Orders</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Shop -->
+      <section id="shop" class="section shop" aria-label="Products">
+        <div class="container">
+          <header class="section-header">
+            <h2>Shop</h2>
+            <p>Completed wooden engraving projects</p>
+          </header>
+          <div id="productGrid" class="product-grid" role="list"></div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials" class="section testimonials" aria-label="Testimonials">
+        <div class="container">
+          <header class="section-header">
+            <h2>What Customers Say</h2>
+          </header>
+          <div class="carousel" aria-roledescription="carousel">
+            <button class="carousel-btn prev" aria-label="Previous testimonial">‹</button>
+            <div class="carousel-track" id="testimonialTrack"></div>
+            <button class="carousel-btn next" aria-label="Next testimonial">›</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact (info only) -->
+      <section id="contact" class="section contact" aria-label="Contact">
+        <div class="container">
+          <header class="section-header">
+            <h2>Contact Us</h2>
+          </header>
+          <div class="contact-grid">
+            <aside class="contact-info">
+              <p><strong>Vip Arts Studio</strong><br/> Chengalpattu, TamilNadu, India</p>
+              <p>Email: aarts.vip@gmail.com<br/> Phone/WhatsApp: +91-93634-77735</p>
+              <ul class="social">
+                <li><a href="https://www.instagram.com/vip__arts" aria-label="Instagram" target="_blank" class="social-link insta"><img src="assets/icons/instagram.svg" alt="Instagram" width="20" height="20" /> Instagram</a></li>
+                <li><a href="https://www.youtube.com/@VIP_Aarts" aria-label="YouTube" target="_blank" class="social-link yt"><img src="assets/icons/youtube.svg" alt="YouTube" width="20" height="20" /> YouTube</a></li>
+              </ul>
+            </aside>
+            <div class="map-embed" aria-label="Map">
+              <iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=79.9020231,12.5447618,79.9060231,12.5487618&layer=mapnik&marker=12.5467618,79.9040231
+              " loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Toast notifications -->
+      <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img src="assets/img/logo.svg" alt="Vip Arts logo" width="36" height="36" />
+          <p>Artistic wooden engraving crafts — made in India.</p>
+        </div>
+        <div class="footer-links">
+          <nav aria-label="Quick links">
+            <a href="#shop">Shop</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-legal">
+          <small>© <span id="year"></span> Vip Arts. All rights reserved. • Decimal</small>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html> 
