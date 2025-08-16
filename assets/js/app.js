@@ -44,10 +44,37 @@ function toggleTheme() {
 function initNav() {
   const btn = $('.nav-toggle');
   const list = $('#nav-list');
-  btn?.addEventListener('click', () => {
-    const expanded = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', String(!expanded));
-    list.classList.toggle('open');
+  if (!btn || !list) return;
+
+  function openMenu() {
+    btn.setAttribute('aria-expanded', 'true');
+    list.classList.add('open');
+  }
+  function closeMenu() {
+    btn.setAttribute('aria-expanded', 'false');
+    list.classList.remove('open');
+  }
+  function isOpen() { return list.classList.contains('open'); }
+
+  btn.addEventListener('click', () => {
+    if (isOpen()) closeMenu(); else openMenu();
+  });
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    const nav = btn.closest('.main-nav');
+    if (!nav) return;
+    if (!nav.contains(e.target) && isOpen()) closeMenu();
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isOpen()) closeMenu();
+  });
+
+  // Reset state when switching to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 900) closeMenu();
   });
 
   const links = $$('.nav-link');
