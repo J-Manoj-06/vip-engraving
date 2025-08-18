@@ -6,7 +6,7 @@
 
 // ======= CONFIG =======
 // Edit this number to your WhatsApp Business number (international format, no + or spaces)
-const WHATSAPP_NUMBER = "919345387904";
+const WHATSAPP_NUMBER = "919363477735";
 
 // ======= UTILITIES =======
 const $ = (sel, root = document) => root.querySelector(sel);
